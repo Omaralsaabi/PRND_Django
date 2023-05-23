@@ -6,7 +6,7 @@ from django.db import models
 class Ad(models.Model):
     user = models.ForeignKey("account.User", verbose_name=("user"), on_delete=models.CASCADE)
     car = models.ForeignKey("core.Car", verbose_name=("car"), on_delete=models.CASCADE)
-    price = models.IntegerField(max_length=50)
+    price = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='images/')
     description = models.TextField()
